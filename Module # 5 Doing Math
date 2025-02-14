@@ -1,3 +1,5 @@
+> library(matlib)
+
 > A <- matrix(1:100, nrow=10)
 
 > B <- matrix(1:1000, nrow=10)
@@ -5,6 +7,11 @@
 > #Determinant of A
 > det(A)
 [1] 0
+
+> #Inverse of A
+> inv(A)
+Error in Inverse(X, tol = sqrt(.Machine$double.eps), ...) : 
+  X is numerically singular
 
 > #Determinant of B
 > det(B)
