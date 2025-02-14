@@ -1,0 +1,12 @@
+> A <- matrix(1:100, nrow=10)
+
+> B <- matrix(1:1000, nrow=10)
+
+> #Determinant of A
+> det(A)
+[1] 0
+
+> #Determinant of B
+> det(B)
+Error in determinant.matrix(x, logarithm = TRUE, ...) : 
+  'x' must be a square matrix
