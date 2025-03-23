@@ -1,0 +1,30 @@
+# Libraries
+library(lattice)
+library(ggplot2)
+
+# Load California test score data
+cad <- read.csv("C:\\Users\\Erick\\Downloads\\CASchools.csv")
+str(cad)
+
+
+# Basic visualization with no package visual
+hist(cad$read,
+     main = "Base R Histogram: Reading Scores",
+     xlab = "Reading Score",
+     col = "blue",
+     border = "white")
+
+# Lattice scatterplot visual
+xyplot(math ~ income, data = cad,
+       main = "Lattice: Income vs Math Score",
+       xlab = "Average Income",
+       ylab = "Math Score",
+       col = "darkgreen",
+       pch = 16)
+
+# ggplot2 visual
+ggplot(cad, aes(x = income, y = english)) +
+  geom_point(color = "orange", size = 2) +
+  labs(title = "ggplot2: Income vs Math Score",
+       x = "Average Income",
+       y = "English Score")
