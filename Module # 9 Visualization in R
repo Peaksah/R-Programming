@@ -25,6 +25,6 @@ xyplot(math ~ income, data = cad,
 # ggplot2 visual
 ggplot(cad, aes(x = income, y = english)) +
   geom_point(color = "orange", size = 2) +
-  labs(title = "ggplot2: Income vs Math Score",
+  labs(title = "ggplot2: Income vs English Score",
        x = "Average Income",
        y = "English Score")
